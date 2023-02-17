@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="shadow card">
+  <div class="card-header">
+    <div class="card-title">
+      Task Update
+    </div>
+    <div class="card-body">
+
+      <form method="POST">
+      {% csrf_token %}
+      <p>Are You Sure To Delete This Task?</p>
+      <input type="submit" value="confirm">
+      </form>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

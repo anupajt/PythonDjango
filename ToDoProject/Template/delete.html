@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<style>
+
+     #form{background:linear-gradient(125deg,yellow,blue,green);
+           background-size:cover;
+           position:relative;
+           border-radius:10px;
+           width:1275px;
+           height:600px;
+           text-align:center;
+           padding:200px;
+           margin:auto;
+           display:inline-block;
+           }
+
+</style>
+<div id="form">
+<form method="POST">
+  {% csrf_token %}
+  <p><b>ARE YOU SURE TO DELETE THIS TASK?</b></p>
+  <input type="submit" class="btn btn-danger" value="CONFIRM" >
+</form>
+</div>
+{% endblock %}

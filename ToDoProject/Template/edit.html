@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<style>
+
+     #form{background:linear-gradient(125deg,red,orange,purple);
+           background-size:cover;
+           position:relative;
+           border-radius:10px;
+           width:1275px;
+           height:600px;
+           text-align:center;
+           padding:200px;
+           margin:auto;
+           display:inline-block;
+           }
+     h1{text-align:centre;
+        position:absolute;
+        top:80px;
+        left:490px;}
+
+</style>
+
+
+<div id="form">
+<form method="POST">
+    <h1> UPDATE DETAILS</h1>
+  {% csrf_token %}
+  {{form.as_p}}
+  <input type="submit" class="btn btn-success" value="CONFIRM">
+
+</form>
+</div>
+
+{% endblock %}
